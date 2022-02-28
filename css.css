@@ -1,0 +1,62 @@
+body{
+    text-align: center;
+}
+
+
+#cajas_de_texto{
+    margin-bottom: 50px;
+}
+
+#ingrese_texto{
+    border-radius: 5px;
+    border: 0;
+    background-color: lightgrey;
+    padding: 10px;
+    height: 50px;
+}
+textarea {
+    border: solid 1px lightgray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 100px lightgray;
+  }
+#encriptar{
+    margin-right: 50px;
+}
+#mensaje {
+    border-radius: 5px;
+}
+
+#box-footer{
+    background-color: lightblue;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+footer{
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#btn-encriptar, #btn-desencriptar{
+    background-color: lightblue;
+    border: solid 1px lightgray;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 3px 3px 100px lightgray;
+    
+}
+
+#btn-encriptar:hover{
+    background-color: gray;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+#btn-desencriptar:hover{
+    background-color: gray;
+    transition: background-color .5s;
+    cursor: pointer;
+}
