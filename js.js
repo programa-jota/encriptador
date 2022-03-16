@@ -1,6 +1,6 @@
 // captura de lo que esta en el campto del textarea
 
-mensaje = document.getElementById("dseencriptar");
+mensaje = document.getElementById("desencriptar");
 
 
 //captura del evento click en boton encriptar
@@ -11,11 +11,16 @@ botonEncriptar.onclick = encriptar;
 var botonDesencriptar = document.getElementById("btn-desencriptar");
 botonDesencriptar.onclick = desencriptar;
 
+//captura del evento click en boton copiar
+var botonCopiar = document.getElementById("btn-copiar");
+botonCopiar.onclick = copiar;
+
+
 
 //Funcion encriptar
 function encriptar(){
     var texto = document.getElementById("encriptar").value;
-
+    
     var nuevotextoe = texto.replace(/e/igm, "enter")// utilizo expresiones regulares --> /x/igm 
     var nuevotextoi = nuevotextoe.replace(/i/igm, "imes"); 
     var nuevotextoa = nuevotextoi.replace(/a/igm, "ai");
@@ -24,9 +29,7 @@ function encriptar(){
     
     document.getElementById("desencriptar").value = nuevotextou;
     document.getElementById("encriptar").value = "";
-    
-    
-    
+        
 }
 
 
@@ -43,5 +46,19 @@ function desencriptar(){
     document.getElementById("desencriptar").value = nuevotextou;
     document.getElementById("encriptar").value = "";
     
+}
+
+function copiar(){   
+
+    var contenido = document.getElementById("desencriptar").value;
+    document.querySelector
+    
+    navigator.clipboard.writeText(contenido)
+        .then(() => {
+        alert("mensaje copiado");
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
 }
 

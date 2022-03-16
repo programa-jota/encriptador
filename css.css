@@ -1,31 +1,52 @@
 body{
     text-align: center;
 }
-
-
-#cajas_de_texto{
-    margin-bottom: 50px;
-}
-
-#ingrese_texto{
-    border-radius: 5px;
-    border: 0;
-    background-color: lightgrey;
-    padding: 10px;
-    height: 50px;
-}
 textarea {
     border: solid 1px lightgray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 3px 3px 100px lightgray;
-  }
-#encriptar{
-    margin-right: 50px;
+    
 }
-#mensaje {
+#principal{
+    display: flex;    
+    padding: 15px;
+    justify-content:center
+}
+
+#ingrese_texto{
+    display: flexbox;    
+    margin-left: -30px;
     border-radius: 5px;
+    box-shadow: 3px 3px 100px lightgray;
+    padding: 20px;
+    outline: 1px solid lightgray;
+    
+}
+#p-ingrese-texto{
+    font-size: 14px;
+    padding: 5px;
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+    overflow: auto;
+    font-weight: bold;
+    text-align: left;
+}
+
+#mensaje{
+    margin-left: 30px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 100px lightgray;
+    padding: 20px;
+    outline: 1px solid lightgray;
+    
+}
+
+
+#botones, #box-copiar{
+    padding-top: 10px;
 }
 
 #box-footer{
@@ -36,11 +57,11 @@ textarea {
     left: 0;
 }
 footer{
-    font-style: italic;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#btn-encriptar, #btn-desencriptar{
+#btn-encriptar{
+    display: inline;
     background-color: lightblue;
     border: solid 1px lightgray;
     padding: 8px;
@@ -49,7 +70,31 @@ footer{
     box-shadow: 3px 3px 100px lightgray;
     
 }
+#btn-desencriptar{
+    display: inline;
+    background-color: lightblue;
+    border: solid 1px lightgray;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 3px 3px 100px lightgray;
+}
 
+#btn-copiar{
+    display: inline;
+    background-color: lightblue;
+    border: solid 1px lightgray;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 3px 3px 100px lightgray;
+}
+
+#btn-copiar:hover{
+    background-color: gray;
+    transition: background-color .5s;
+    cursor: pointer;
+}
 #btn-encriptar:hover{
     background-color: gray;
     transition: background-color .5s;
