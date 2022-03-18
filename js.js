@@ -15,12 +15,21 @@ botonDesencriptar.onclick = desencriptar;
 var botonCopiar = document.getElementById("btn-copiar");
 botonCopiar.onclick = copiar;
 
-
+function validar (){
+    var texto = document.getElementById("encriptar").value;
+    var coincidencia = /^[a-z, ]+$/g;
+    if (texto.match(coincidencia)){
+    }else{
+        alert("Hay una mayuscula o acento. Por favor intente de nuevo");
+        document.getElementById("encriptar").value = "";
+        return
+    }
+}
 
 //Funcion encriptar
 function encriptar(){
+    validar();
     var texto = document.getElementById("encriptar").value;
-    
     var nuevotextoe = texto.replace(/e/igm, "enter")// utilizo expresiones regulares --> /x/igm 
     var nuevotextoi = nuevotextoe.replace(/i/igm, "imes"); 
     var nuevotextoa = nuevotextoi.replace(/a/igm, "ai");
